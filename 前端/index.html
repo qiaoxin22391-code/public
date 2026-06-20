@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <p>这是一个段落</p>
+    </ul>
+    <button class="btn">点击我</button>
+    <input class="input" type="text" id="input">
+    <script>
+        var list = document.getElementById("list");
+        list.onclick = function (e) {
+            if (e.target.tagName === "LI") {
+                console.log(e.target.innerHTML);
+            } else if (e.target.tagName === "P") {
+                console.log(e.target.innerHTML);
+            }
+        };
+
+        var btn = document.getElementsByClassName("btn")[0];
+        btn.onclick = function () {
+            console.log("按钮被点击了");
+        };
+
+        var input = document.querySelector(".input");
+        input.oninput = function () {
+            console.log("输入框内容:", input.value);
+        };
+    </script>
+ </body>
+
+</html>
